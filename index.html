@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> </title>
+  <link rel="stylesheet" href="style/style.css">
+
+
+  <!-- fontAwsome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- remixIcon cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+</head>
+
+<body>
+
+  <p class="title">Rock Paper Scissors</p>
+  <button onclick="
+        playGame('rock');
+      " class="move-button">
+    <img src="images/rock-emoji.png" class="move-icon">
+  </button>
+
+  <button onclick="
+        playGame('paper');
+      " class="move-button">
+    <img src="images/paper-emoji.png" class="move-icon">
+  </button>
+
+  <button onclick="
+        playGame('scissors');
+      " class="move-button">
+    <img src="images/scissors-emoji.png" class="move-icon">
+  </button>
+
+  <p class="js-result result"></p>
+  <p class="js-moves"></p>
+  <p class="js-score score"></p>
+
+  <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+      " class="reset-score-button">Reset Score
+  </button>
+
+  <button onclick="autoPlay()" class="auto-play-button">Auto Play</button>
+
+  <script src="script/main.js">
+  </script>
+</body>
+
+</html>
